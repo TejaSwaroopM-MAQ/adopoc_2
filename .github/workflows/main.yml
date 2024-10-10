@@ -21,7 +21,8 @@ jobs:
     - name: Add Azure DevOps remote repository
       run: |
         git remote add azure https://mullamuris:${{ secrets.ADO_TOKEN }}@dev.azure.com/mullamuris/Bootcamp/_git/Bootcamp
+        git fetch azure
+        git merge azure/master || true  # Continue even if there are merge conflicts
 
     - name: Push to Azure DevOps
-      run: |
-        git push azure master
+      run: git push azure master
