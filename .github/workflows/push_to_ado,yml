@@ -20,7 +20,7 @@ jobs:
 
     - name: Add Azure DevOps remote repository
       run: |
-        git remote add azure https://mullamuris:yyyw4w5iiiyblqiwnq5fullsltciaoqw7rbp5owjj2p3y6pyuxgq@dev.azure.com/mullamuris/Bootcamp/_git/Bootcamp
+        git remote add azure https://mullamuris:${{secrets.ADO_TOKEN}}@dev.azure.com/mullamuris/Bootcamp/_git/Bootcamp
 
     - name: Push to Azure DevOps
       run: |
