@@ -22,7 +22,7 @@ jobs:
       run: |
         git remote add azure https://mullamuris:${{ secrets.ADO_TOKEN }}@dev.azure.com/mullamuris/Bootcamp/_git/Bootcamp
         git fetch azure
-        git pull azure master  # Pull changes from the remote before pushing
+  
 
     - name: Push to Azure DevOps
       run: git push azure master
